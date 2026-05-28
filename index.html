@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Karen Karanja — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script>
+/* ============================================================
+   ✏️  YOUR PORTFOLIO CONTENT — EDIT EVERYTHING IN HERE
+   Open this file in Notepad, change any text below,
+   save the file, then refresh it in your browser.
+   DO NOT edit anything below the closing }; on line ~120
+   ============================================================ */
+
+const DATA = {
+
+  /* --- TOP OF PAGE --- */
+  name:          "Karen Karanja",
+  tagline:       "Influencer Marketing & Community Manager",
+  availability:  "Available for Projects & Full-Time Roles",
+  heroSubtitle:  "Influencer Marketing & Community Manager with 5+ years building creator-led campaigns and engaged brand communities across East & Central Africa.",
+  email:         "karwankaranja@gmail.com",
+  phone:         "+254 719 737 976",
+  location:      "Nairobi, Kenya",
+  linkedin:      "https://www.linkedin.com/in/karen-karanja-ma-883590197",
+
+  /* --- HERO STATS (3 numbers shown top-right) --- */
+  stats: [
+    { num: "5+",  label: "Years of Experience" },
+    { num: "10+", label: "African Markets" },
+    { num: "12+", label: "Brands Managed" },
+  ],
+
+  /* --- ABOUT SECTION --- */
+  aboutIntro: "I connect brands with the right creators and communities to drive real engagement — not just impressions. My work sits at the intersection of influencer strategy, community building, and campaign execution.",
+  aboutBody: [
+    "With 5+ years across agency and regional roles, I've managed end-to-end influencer programmes for some of Africa's most recognised brands — identifying the right voices, negotiating, briefing, monitoring deliverables, and translating performance data into actionable insight.",
+    "I'm at my best when working on campaigns that feel culturally authentic — where the creator's audience actually cares, and the brand story lands with real people.",
+    // Add a third paragraph here if you like, or delete this line
+  ],
+  aboutStatus:    "Open to Opportunities",
+  aboutStatusSub: "Full-time roles & freelance projects",
+  aboutLocation:  "Nairobi, Kenya · Available for remote & regional work",
+  aboutSpec:      "Influencer Marketing · Community Management",
+  aboutSpecSub:   "East & Central Africa",
+  aboutEdu:       "MA, Digital Communication — USIU Africa",
+  aboutEduSub:    "BA, Communication (Advertising) — Daystar University",
+  aboutAward:     "Marketing Society of Kenya — Certificate of Excellence",
+  aboutAwardSub:  "1st Runner-Up, Best Influencer Campaign 2024 & 2025",
+
+  /* --- WHAT I DO (4 cards) --- */
+  expertise: [
+    {
+      num: "01",
+      title: "Influencer Campaign Strategy",
+      body:  "End-to-end influencer programme management — from strategy development and creator identification to briefing, negotiations, delivery monitoring, and performance reporting. Built for brands that want campaigns that actually convert.",
+    },
+    {
+      num: "02",
+      title: "Community Management",
+      body:  "Building and nurturing brand communities that go beyond follower counts. I manage moderation, drive meaningful conversations, respond to consumers, and turn audiences into loyal brand advocates across social platforms.",
+    },
+    {
+      num: "03",
+      title: "Cross-Market Campaign Execution",
+      body:  "Managing integrated campaigns across multiple East & Central African markets, coordinating between creative, strategy, media, and client teams to ensure seamless delivery and brand consistency at scale.",
+    },
+    {
+      num: "04",
+      title: "Analytics & Reporting",
+      body:  "Translating campaign data into clear, actionable insight. I deliver post-campaign reports with social listening analysis, KPI tracking, and strategic recommendations that inform smarter future campaigns.",
+    },
+  ],
+
+  /* --- WORK EXPERIENCE --- */
+  experience: [
+    {
+      company:   "WPP Media / EssenceMediacom",
+      dates:     "Sep 2023 — Aug 2025",
+      location:  "Nairobi, Kenya",
+      title:     "Influencer Marketing Manager\nEast & Central Africa — Coca-Cola",
+      summary:   "Embedded within a regional agency setup to lead influencer and community initiatives for The Coca-Cola Company across East & Central Africa — working directly with clients, creators, and cross-functional teams to deliver integrated campaigns at scale.",
+      bullets: [
+        "Led end-to-end influencer marketing strategy and execution across 10+ East & Central African markets for Coca-Cola's brand portfolio",
+        "Managed full-cycle creator partnerships — identification, briefing, negotiation, delivery monitoring, and post-campaign effectiveness reporting",
+        "Oversaw integrated content creation and approval workflows, ensuring brand compliance across all creative assets and markets",
+        "Built and managed social media brand communities, driving consumer engagement and sustaining long-term brand loyalty",
+        "Prepared comprehensive post-campaign reports using social listening insights and KPI tracking to inform strategic recommendations",
+        "Coordinated across strategy, creative, media, and bottler teams — developing structured workflows that improved campaign delivery",
+        "Managed full billings process for social and influencer services including CEs, purchase orders, and invoices",
+      ],
+      award: "🏆 Marketing Society of Kenya — Certificate of Excellence, 1st Runner-Up, Best Influencer Campaign (Coke with Meals 2024 & Share-A-Coke 2025)",
+      brands: "", // leave blank if no brand list for this role
+    },
+    {
+      company:   "Zilojo Limited",
+      dates:     "Jan 2021 — Sep 2023",
+      location:  "Nairobi, Kenya",
+      title:     "Social Media &\nCommunity Manager",
+      summary:   "Managed online brand communities and influencer relationships for a portfolio of 12+ brand accounts in a fast-paced digital agency environment, supporting content planning, creator partnerships, live coverage, and campaign reporting.",
+      bullets: [
+        "Managed, moderated, and grew brand communities across social platforms — driving conversations, handling consumer inquiries, and building authentic brand-audience relationships",
+        "Executed end-to-end creator partnerships across multiple accounts — strategy, identification, briefing, negotiations, and post-campaign reporting",
+        "Compiled and managed monthly content calendars, scheduling and publishing content while maintaining brand consistency",
+        "Delivered campaign performance reports with competitor analysis and data-backed recommendations to maximise results",
+        "Contributed to pitch development, building social and influencer strategies for prospective and existing clients",
+        "Supported real-time brand presence during live events across social platforms",
+      ],
+      award: "",
+      brands: "Nice & Lovely Kenya · Ribena East Africa · Lucozade East Africa · Jack Daniel's Tennessee Whiskey Kenya · iPay Africa · Madison Insurance · Fillerina Kenya · Guinness Kenya · Suzuki Bikes Kenya · MasterCard Foundation Fund for Rural Prosperity",
+    },
+  ],
+
+  /* --- BRANDS STRIP --- */
+  brands: [
+    "Coca-Cola", "Sprite", "Fanta", "Ribena", "Lucozade",
+    "Guinness", "Jack Daniel's", "Nice & Lovely",
+    "MasterCard Foundation", "Madison Insurance",
+    "iPay Africa", "Suzuki Bikes",
+    // Add more brands here by copying the format above
+  ],
+
+  /* --- SKILLS --- */
+  skills: [
+    "Influencer Strategy", "Community Management", "Creator Partnerships",
+    "Campaign Execution", "Content Planning", "Social Listening",
+    "Performance Reporting", "Brand Community Building",
+    "Influencer Identification", "Rate Negotiation",
+    "Cross-functional Coordination", "Client Management",
+    "Pitch Development", "Content Governance",
+  ],
+
+  /* --- TOOLS --- */
+  tools: [
+    { name: "Meltwater",                        cat: "Social Listening / Influencer" },
+    { name: "CreatorIQ",                         cat: "Influencer Management" },
+    { name: "Sprout Social",                     cat: "Community Management" },
+    { name: "Hootsuite",                         cat: "Social Media Management" },
+    { name: "Agorapulse",                        cat: "Community Management" },
+    { name: "Instagram · TikTok · X · Facebook", cat: "Platforms" },
+    // Add more tools here
+  ],
+
+  /* --- EDUCATION --- */
+  education: [
+    {
+      degree:  "Master of Arts in Communication Studies",
+      school:  "United States International University — Africa",
+      detail:  "Major: Digital Communication · 2022–2024",
+    },
+    {
+      degree:  "Bachelor of Arts in Communication",
+      school:  "Daystar University, Nairobi",
+      detail:  "Major: Advertising · Minor: Marketing · 2016–2020",
+    },
+  ],
+
+  /* --- CONTACT BLURB --- */
+  contactBlurb: "I'm currently open to full-time roles and freelance projects in influencer marketing, community management, and creator strategy — particularly within East & Central Africa and Pan-African brand campaigns. If you're building something, I'd love to hear about it.",
+
+};
+/* ============================================================
+   END OF EDITABLE CONTENT — do not edit below this line
+   ============================================================ */
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0C0C0B; --cream: #F4F0E8; --cream-muted: #C8C2B4;
+    --accent: #C8603A; --accent-light: #E8896A; --surface: #161614;
+    --surface2: #1E1E1B; --border: rgba(244,240,232,0.1);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--cream); font-family: var(--sans); font-weight: 300; line-height: 1.7; font-size: 16px; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(12,12,11,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-muted); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-cta { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 1.4rem; border: 1px solid var(--accent); color: var(--accent); border-radius: 2px; transition: background 0.2s, color 0.2s; }
+  .nav-cta:hover { background: var(--accent); color: var(--cream); }
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 60vw; height: 80vh; background: radial-gradient(ellipse at center, rgba(200,96,58,0.07) 0%, transparent 70%); pointer-events: none; }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--accent); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(3.5rem, 7vw, 6.5rem); font-weight: 300; line-height: 1.0; margin-bottom: 0.2em; }
+  .hero h1 em { font-style: italic; color: var(--accent-light); }
+  .hero-subtitle { font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--cream-muted); max-width: 480px; margin: 1.5rem 0 2.5rem; font-weight: 300; line-height: 1.65; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { padding: 0.9rem 2.2rem; background: var(--accent); color: var(--cream); border-radius: 2px; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-ghost { padding: 0.9rem 2.2rem; border: 1px solid var(--border); color: var(--cream-muted); border-radius: 2px; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+  .btn-ghost:hover { border-color: var(--cream-muted); color: var(--cream); }
+  .hero-stats { position: absolute; right: 4rem; bottom: 4rem; display: flex; flex-direction: column; gap: 2rem; text-align: right; }
+  .stat-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 300; line-height: 1; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-muted); margin-top: 0.2rem; }
+  section { padding: 6rem 4rem; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+  .section-label::before { content: ''; display: block; width: 1.5rem; height: 1px; background: var(--accent); }
+  .section-title { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 0.15em; }
+  .section-title em { font-style: italic; color: var(--accent-light); }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3.5rem; align-items: start; }
+  .about-text p { color: var(--cream-muted); margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.75; }
+  .about-text p:first-child { font-family: var(--serif); font-size: 1.35rem; color: var(--cream); line-height: 1.5; }
+  .about-details { display: flex; flex-direction: column; gap: 1.5rem; }
+  .detail-row { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+  .detail-value { font-size: 1rem; color: var(--cream); font-weight: 400; }
+  .detail-sub { font-size: 0.88rem; color: var(--cream-muted); }
+  .expertise-section { background: var(--surface); }
+  .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; margin-top: 3.5rem; border: 1px solid var(--border); }
+  .expertise-card { padding: 2.5rem 2rem; background: var(--surface); border-right: 1px solid var(--border); transition: background 0.2s; }
+  .expertise-card:hover { background: var(--surface2); }
+  .expertise-card:last-child { border-right: none; }
+  .expertise-icon { width: 2.5rem; height: 2.5rem; border: 1px solid var(--accent); border-radius: 2px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent); font-family: var(--serif); font-size: 1.1rem; }
+  .expertise-card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.75rem; }
+  .expertise-card p { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.65; }
+  .experience-items { margin-top: 3.5rem; }
+  .exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+  .exp-item:first-child { border-top: 1px solid var(--border); }
+  .exp-company { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .exp-dates { font-size: 0.85rem; color: var(--cream-muted); margin-bottom: 0.8rem; }
+  .exp-location { font-size: 0.8rem; color: var(--cream-muted); opacity: 0.6; }
+  .exp-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; line-height: 1.2; margin-bottom: 1.2rem; white-space: pre-line; }
+  .exp-desc { font-size: 0.95rem; color: var(--cream-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+  .exp-bullets li { font-size: 0.9rem; color: var(--cream-muted); padding-left: 1.2rem; position: relative; line-height: 1.6; }
+  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 0.8rem; }
+  .exp-award { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.2rem; padding: 0.5rem 1rem; border: 1px solid rgba(200,96,58,0.3); border-radius: 2px; font-size: 0.78rem; color: var(--accent-light); }
+  .exp-brands { margin-top: 1.2rem; font-size: 0.82rem; color: var(--cream-muted); opacity: 0.7; }
+  .exp-brands span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; color: var(--accent); opacity: 1; }
+  .brands-section { background: var(--surface); }
+  .brands-strip { margin-top: 3rem; display: flex; flex-wrap: wrap; border: 1px solid var(--border); }
+  .brand-pill { padding: 1.2rem 2rem; font-family: var(--serif); font-size: 1.05rem; font-style: italic; color: var(--cream-muted); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: color 0.2s, background 0.2s; }
+  .brand-pill:hover { color: var(--cream); background: var(--surface2); }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; }
+  .skill-group h3 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .skill-tag { padding: 0.4rem 1rem; border: 1px solid var(--border); border-radius: 2px; font-size: 0.82rem; color: var(--cream-muted); transition: border-color 0.2s, color 0.2s; }
+  .skill-tag:hover { border-color: var(--accent); color: var(--cream); }
+  .tool-list { display: flex; flex-direction: column; }
+  .tool-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+  .tool-name { font-size: 0.9rem; color: var(--cream); }
+  .tool-cat { font-size: 0.75rem; color: var(--cream-muted); }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .edu-card { padding: 2rem; border: 1px solid var(--border); border-radius: 2px; transition: border-color 0.2s; }
+  .edu-card:hover { border-color: var(--accent); }
+  .edu-degree { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; margin-bottom: 0.3rem; }
+  .edu-school { font-size: 0.88rem; color: var(--accent-light); margin-bottom: 0.4rem; font-weight: 400; }
+  .edu-detail { font-size: 0.82rem; color: var(--cream-muted); }
+  .contact-section { background: var(--surface); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3.5rem; align-items: start; }
+  .contact-subtext { font-size: 0.95rem; color: var(--cream-muted); line-height: 1.7; margin-bottom: 2rem; }
+  .contact-links { display: flex; flex-direction: column; }
+  .contact-link { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border); color: var(--cream-muted); }
+  .contact-link:hover { color: var(--cream); }
+  .contact-link-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+  .contact-link-value { font-size: 0.95rem; margin-top: 0.15rem; }
+  .contact-link-arrow { font-size: 1rem; color: var(--accent); }
+  footer { padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
+  .footer-name { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--cream-muted); }
+  .footer-note { font-size: 0.78rem; color: var(--cream-muted); opacity: 0.5; letter-spacing: 0.08em; }
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; } .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; } .hero { padding: 7rem 1.5rem 3rem; }
+    .hero h1 { font-size: 3rem; } .hero-stats { display: none; }
+    .about-grid, .contact-grid, .skills-grid, .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+
+<section class="hero" id="home"><div id="hero-content"></div><div class="hero-stats" id="hero-stats"></div></section>
+<hr class="divider" />
+<section id="about"><div id="about-content"></div></section>
+<hr class="divider" />
+<section id="expertise" class="expertise-section"><div id="expertise-content"></div></section>
+<hr class="divider" />
+<section id="experience"><div id="experience-content"></div></section>
+<hr class="divider" />
+<section class="brands-section"><div id="brands-content"></div></section>
+<hr class="divider" />
+<section id="skills"><div id="skills-content"></div></section>
+<hr class="divider" />
+<section><div id="edu-content"></div></section>
+<hr class="divider" />
+<section id="contact" class="contact-section"><div id="contact-content"></div></section>
+<footer id="footer"></footer>
+
+<script>
+/* ---- RENDER ENGINE (do not edit) ---- */
+const D = DATA;
+
+document.title = D.name + " — Portfolio";
+
+document.getElementById("nav").innerHTML = `
+  <div class="nav-logo">${D.name}</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:${D.email}" class="nav-cta">Get in Touch</a>`;
+
+const nameParts = D.name.split(" ");
+const heroName = nameParts.length > 1
+  ? nameParts.slice(0,-1).join(" ") + "<br/><em>" + nameParts[nameParts.length-1] + ".</em>"
+  : "<em>" + D.name + ".</em>";
+
+document.getElementById("hero-content").innerHTML = `
+  <div class="hero-eyebrow">${D.availability}</div>
+  <h1>${heroName}</h1>
+  <p class="hero-subtitle">${D.heroSubtitle}</p>
+  <div class="hero-actions">
+    <a href="mailto:${D.email}" class="btn-primary">Let's Work Together</a>
+    <a href="#experience" class="btn-ghost">View My Work</a>
+  </div>`;
+
+document.getElementById("hero-stats").innerHTML = D.stats.map(s => `
+  <div><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`).join("");
+
+const aboutParas = [D.aboutIntro, ...D.aboutBody.filter(Boolean)]
+  .map((p,i) => `<p${i===0?' style="font-family:var(--serif);font-size:1.35rem;color:var(--cream);line-height:1.5;"':''}>${p}</p>`).join("");
+
+document.getElementById("about-content").innerHTML = `
+  <div class="section-label">About Me</div>
+  <h2 class="section-title">Where <em>strategy</em> meets<br/>community.</h2>
+  <div class="about-grid">
+    <div class="about-text">${aboutParas}</div>
+    <div class="about-details">
+      <div class="detail-row"><div class="detail-label">Currently</div><div class="detail-value">${D.aboutStatus}</div><div class="detail-sub">${D.aboutStatusSub}</div></div>
+      <div class="detail-row"><div class="detail-label">Based In</div><div class="detail-value">${D.location}</div><div class="detail-sub">${D.aboutLocation}</div></div>
+      <div class="detail-row"><div class="detail-label">Specialises In</div><div class="detail-value">${D.aboutSpec}</div><div class="detail-sub">${D.aboutSpecSub}</div></div>
+      <div class="detail-row"><div class="detail-label">Education</div><div class="detail-value">${D.aboutEdu}</div><div class="detail-sub">${D.aboutEduSub}</div></div>
+      <div class="detail-row"><div class="detail-label">Recognition</div><div class="detail-value">${D.aboutAward}</div><div class="detail-sub">${D.aboutAwardSub}</div></div>
+    </div>
+  </div>`;
+
+document.getElementById("expertise-content").innerHTML = `
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">Four areas where<br/>I <em>drive results.</em></h2>
+  <div class="expertise-grid">
+    ${D.expertise.map(e => `
+    <div class="expertise-card">
+      <div class="expertise-icon">${e.num}</div>
+      <h3>${e.title}</h3>
+      <p>${e.body}</p>
+    </div>`).join("")}
+  </div>`;
+
+document.getElementById("experience-content").innerHTML = `
+  <div class="section-label">Work Experience</div>
+  <h2 class="section-title">Five years of work<br/>that <em>speaks for itself.</em></h2>
+  <div class="experience-items">
+    ${D.experience.map(e => `
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">${e.company}</div>
+        <div class="exp-dates">${e.dates}</div>
+        <div class="exp-location">${e.location}</div>
+      </div>
+      <div>
+        <div class="exp-title">${e.title}</div>
+        <p class="exp-desc">${e.summary}</p>
+        <ul class="exp-bullets">${e.bullets.map(b=>`<li>${b}</li>`).join("")}</ul>
+        ${e.award ? `<div class="exp-award">${e.award}</div>` : ""}
+        ${e.brands ? `<div class="exp-brands"><span>Brand Portfolio</span>${e.brands}</div>` : ""}
+      </div>
+    </div>`).join("")}
+  </div>`;
+
+document.getElementById("brands-content").innerHTML = `
+  <div class="section-label">Brands I've Worked With</div>
+  <h2 class="section-title">Trusted by brands<br/>across the <em>continent.</em></h2>
+  <div class="brands-strip">
+    ${D.brands.map(b=>`<div class="brand-pill">${b}</div>`).join("")}
+  </div>`;
+
+document.getElementById("skills-content").innerHTML = `
+  <div class="section-label">Skills & Tools</div>
+  <h2 class="section-title">The toolkit behind<br/>every <em>campaign.</em></h2>
+  <div class="skills-grid">
+    <div>
+      <div class="skill-group"><h3>Core Skills</h3>
+      <div class="skill-tags">${D.skills.map(s=>`<span class="skill-tag">${s}</span>`).join("")}</div>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group"><h3>Tools & Platforms</h3>
+      <div class="tool-list">${D.tools.map(t=>`
+        <div class="tool-row"><span class="tool-name">${t.name}</span><span class="tool-cat">${t.cat}</span></div>`).join("")}
+      </div>
+      </div>
+    </div>
+  </div>`;
+
+document.getElementById("edu-content").innerHTML = `
+  <div class="section-label">Education</div>
+  <h2 class="section-title">Built on a strong<br/><em>academic foundation.</em></h2>
+  <div class="edu-grid">
+    ${D.education.map(e=>`
+    <div class="edu-card">
+      <div class="edu-degree">${e.degree}</div>
+      <div class="edu-school">${e.school}</div>
+      <div class="edu-detail">${e.detail}</div>
+    </div>`).join("")}
+  </div>`;
+
+document.getElementById("contact-content").innerHTML = `
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Let's build something<br/><em>together.</em></h2>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-subtext">${D.contactBlurb}</p>
+      <a href="mailto:${D.email}" class="btn-primary">Send Me an Email</a>
+    </div>
+    <div class="contact-links">
+      <div class="contact-link"><div><div class="contact-link-label">Email</div><div class="contact-link-value">${D.email}</div></div><div class="contact-link-arrow">→</div></div>
+      <div class="contact-link"><div><div class="contact-link-label">Phone</div><div class="contact-link-value">${D.phone}</div></div><div class="contact-link-arrow">→</div></div>
+      <a href="${D.linkedin}" target="_blank" class="contact-link"><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">View Profile</div></div><div class="contact-link-arrow">↗</div></a>
+      <div class="contact-link"><div><div class="contact-link-label">Location</div><div class="contact-link-value">${D.location}</div></div></div>
+    </div>
+  </div>`;
+
+document.getElementById("footer").innerHTML = `
+  <div class="footer-name">${D.name}</div>
+  <div class="footer-note">${D.tagline} · ${D.location}</div>`;
+</script>
+</body>
+</html>
